@@ -1,0 +1,22 @@
+.heading {
+    font-size: 2rem;
+    color: #00adb5;
+    font-weight: bolder;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.inner-top-padding {
+    padding-top: 40px;
+}
+
+table {
+    margin-top: 20px;
+}
+
+i {
+    margin: 0 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,53 @@
+
+<!-- 
+    Login Page
+ -->
+
+<div class="login-container">
+    <section class="login">
+        <div class="brand">
+            ShopBridge
+        </div>
+        <div class="brand-heading">
+            <strong> Sign in to ShopBridge Inventory </strong>
+
+            <form [formGroup]="loginform">
+
+                <div class="invalid-login">
+                    {{ getInvalidLoginMsg() }}
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="userName" placeholder="User Name"
+                        formControlName="userName">
+                    <div class="error"
+                        *ngIf="this.loginform.controls.userName.touched && this.loginform.controls.userName.errors?.required">
+                        User Name is Required
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="Password"
+                        formControlName="password">
+                    <div class="error"
+                        *ngIf="this.loginform.controls.password.touched && this.loginform.controls.password.errors?.required">
+                        Password is Required
+                    </div>
+                </div>
+
+            </form>
+
+            <button class="btn text-light sign-in" type="button" (click)="onLogin()">
+                SIGN IN
+            </button>
+
+        </div>
+        <section class="side-section">
+            <p>
+                <span class="heading"><strong> Hi, Admin! </strong></span>
+                <br><br>
+                Please Login to manage your inventory
+            </p>
+        </section>
+    </section>
+</div>
